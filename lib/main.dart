@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toast_app1/my_toast.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,29 +30,11 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Toast message Case 1"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            toastAction();
-          },
-          child: const Text(
-            "Toast Button",
-          ),
-        ),
-      ),
+      body: const MyToast(),
     );
   }
 
   //toast Action function
-  void toastAction() {
-    Fluttertoast.showToast(
-      msg: "Toast btn is clicked",
-      backgroundColor: Colors.black,
-      textColor: Colors.white,
-      fontSize: 20.0,
-      toastLength: Toast.LENGTH_SHORT,
-    );
-  }
 
   // class
 
